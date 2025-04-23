@@ -1,0 +1,8 @@
+[package]
+name = "red-blox/signal"
+version = "2.0.2"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Spawn = "red-blox/spawn@1.0.0"

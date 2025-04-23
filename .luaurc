@@ -1,0 +1,4 @@
+{
+	"languageMode": "strict",
+	"lint": { "*": true, "LocalShadow": false }
+}

@@ -1,0 +1,120 @@
+{
+    "Shared": {
+        "prefix": "/shared",
+        "body": "local Shared = game.ReplicatedStorage.Shared",
+        "description": "Get a reference to the Shared folder."
+    },
+
+    "NewModule": {
+        "prefix": "/module",
+
+        "body": [
+            "local ${1:$TM_FILENAME_BASE} = {}",
+            "${1:$TM_FILENAME_BASE}.__index = ${1:$TM_FILENAME_BASE}",
+            "",
+            "export type Class = typeof(setmetatable({} :: {",
+            "    ",
+            "}, ${1:$TM_FILENAME_BASE}))",
+            "",
+            "function ${1:$TM_FILENAME_BASE}.new(): Class",
+            "    return setmetatable({",
+            "        ",
+            "    }, ${1:$TM_FILENAME_BASE})",
+            "end",
+            "",
+            "return ${1:$TM_FILENAME_BASE}"
+        ],
+
+        "description": "Creates a new class."
+    },
+
+    "Roblox Service": {
+        "prefix": "GetService",
+        "body": "local ${1} = game:GetService(\"${1}\")",
+        "description": "Get a Roblox service."
+    },
+
+    "Require Module": {
+        "prefix": "/reqmod",
+        "body": "local ${1} = require(Shared.${1})",
+        "description": "Require a module in Shared."
+    },
+
+    "New UI": {
+        "prefix": "/ui",
+
+        "body": [
+            "local UI = script:FindFirstAncestor(\"UI\")",
+            "local Common = UI.Common",
+            "",
+            "local React = require(Common.React)",
+            "",
+            "export type Props = {",
+            "    ",
+            "}",
+            "",
+            "local function ${1:$TM_FILENAME_BASE}(props: Props)",
+            "    ",
+            "end",
+            "",
+            "return ${1:$TM_FILENAME_BASE}",
+        ],
+    },
+
+    "New Story": {
+        "prefix": "/story",
+
+        "body": [
+            "local UI = script:FindFirstAncestor(\"UI\")",
+            "local StoryBuilder = require(UI.Common.StoryBuilder)",
+            "",
+            "return StoryBuilder.Create(script.Parent.${1}, {",
+            "    ",
+            "})",
+        ]
+    },
+
+    "New Custom Story": {
+        "prefix": "/customstory",
+
+        "body": [
+            "local UI = script:FindFirstAncestor(\"UI\")",
+            "local Common = UI.Common",
+            "",
+            "local React = require(Common.React)",
+            "local StoryBuilder = require(Common.StoryBuilder)",
+            "",
+            "local Components = script.Parent",
+            "local ${1} = require(Components.${1})",
+            "",
+            "export type StoryProps = {",
+            "    ",
+            "}",
+            "",
+            "local function CustomStory(props: StoryProps)",
+            "    return React.createElement(${1}, {",
+            "        -- FIXME",
+            "    })",
+            "end",
+            "",
+            "return StoryBuilder.Custom(CustomStory, {",
+            "    ",
+            "})",
+        ]
+    },
+
+    "New Hook": {
+        "prefix": "/hook",
+
+        "body": [
+            "local UI = script:FindFirstAncestor(\"UI\")",
+            "local React = require(UI.Common.React)",
+            "",
+            "local function ${1:$TM_FILENAME_BASE}(${2})",
+            "    ${3}",
+            "end",
+            "",
+            "return ${1:$TM_FILENAME_BASE}",
+        ],
+    },
+}
