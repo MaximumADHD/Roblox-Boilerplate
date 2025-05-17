@@ -28,6 +28,16 @@ function Tags.GetInstanceRemovedSignal(tag: string): RBXScriptSignal
     return CollectionService:GetInstanceRemovedSignal(tag)
 end
 
+function Tags.FindFirstTagged(tag: string): Instance?
+    local tagged = CollectionService:GetTagged(tag)
+
+    if #tagged > 0 then
+        return tagged[1]
+    end
+
+    return nil
+end
+
 function Tags.Bind(tag: string, onAdded: (Instance) -> (), onRemoved: (Instance) -> ()?): Trove.Class
     local maid = Trove.new()
     maid:Connect(Tags.GetInstanceAddedSignal(tag), onAdded)

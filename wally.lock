@@ -98,7 +98,7 @@ version = "0.9.3"
 dependencies = [["Promise", "evaera/promise@4.0.0"]]
 
 [[package]]
-name = "maximumadhd/sandbox"
+name = "maximumadhd/roblox-boilerplate"
 version = "1.0.0"
 dependencies = [["Future", "red-blox/future@1.0.1"], ["Promise", "evaera/promise@4.0.0"], ["React", "jsdotlua/react@17.2.1"], ["ReactRoblox", "jsdotlua/react-roblox@17.2.1"], ["Red", "red-blox/red@2.3.2"], ["Ripple", "littensy/ripple@0.9.3"], ["Signal", "sleitnick/signal@2.0.3"], ["Trove", "sleitnick/trove@0.5.0"]]
 

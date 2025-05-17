@@ -1,11 +1,20 @@
 {
     "name": "Boilerplate",
+    "emitLegacyScripts": false,
 
     "tree": {
         "$className": "DataModel",
 
+        "ReplicatedFirst": {
+            "$path": "Client"
+        },
+
         "ReplicatedStorage": {
             "$className": "ReplicatedStorage",
+
+            "Config": {
+                "$path": "Config"
+            },
 
             "Packages": {
                 "$path": "Packages"
@@ -16,13 +25,8 @@
             }
         },
 
-        "StarterGui": {
-            "$className": "StarterGui",
-            "$ignoreUnknownInstances": true,
-
-            "UI": {
-                "$path": "UI"
-            }
+        "ServerStorage": {
+            "$path": "Server"
         }
     }
 }

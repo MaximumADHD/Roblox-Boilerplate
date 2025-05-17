@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "evaera.vscode-rojo",
+        "johnnymorganz.luau-lsp",
+        "stefan-h-at.source-engine-support",
+    ],
+
+    "unwantedRecommendations": [
+        "kampfkarren.selene-vscode",
+        "nightrains.robloxlsp",
+        "johnnymorganz.stylua",
+    ]
+}

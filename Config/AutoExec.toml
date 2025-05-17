@@ -1,0 +1,9 @@
+#
+# This file is used to run a series of command scripts when the game starts.
+# Write `YourUsername = "ScriptName"` to auto-execute that script when the game starts.
+#
+# If you want to execute multiple scripts, wrap them in brackets like so: 
+# `YourUsername = ["ScriptName1", "ScriptName2"]`
+#
+
+Maximum_ADHD = "max_test"

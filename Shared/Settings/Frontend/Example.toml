@@ -1,0 +1,41 @@
+"$CategoryOrder" = 0
+
+[ExampleString]
+Order = 1
+Title = "Example String"
+Description = """
+This is an example of a string setting.
+It can be used to store any text value, such as a name or description.
+"""
+Default = "String"
+
+[ExampleNumber]
+Order = 2
+Title = "Example Number"
+Description = """
+This is an example of a number setting.
+It can be used to store any numeric value, such as a score or level.
+"""
+Default = 0
+Min = 0
+Max = 100
+Inc = 1
+
+[ExampleBoolean]
+Order = 3
+Title = "Example Boolean"
+Description = """
+This is an example of a boolean setting.
+It can be used to store a true/false value, such as whether a feature is enabled or disabled.
+"""
+Default = true
+
+[ExampleEnum]
+Order = 4
+Title = "Example Enum"
+Description = """
+This is an example of an enum setting.
+It can be used to store a value from a predefined list, such as a color or style.
+"""
+Default = "Option1"
+Options = ["Option1", "Option2", "Option3"]
