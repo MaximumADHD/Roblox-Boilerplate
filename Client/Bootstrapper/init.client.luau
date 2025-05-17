@@ -46,8 +46,8 @@ if RunContext.IsStudio or DEBUG_DEV then
 
         task.delay(2, function ()
             local ConVar = require(Shared.ConVar)
-            local react_log = ConVar.Declare("/react_log", "", ConVar.TEST + ConVar.LOCAL, "Dumps recent react commits to the console.")
-            local react_live_log = ConVar.Declare("react_live_log", false, ConVar.TEST + ConVar.LOCAL, "Dumps recent react commits to the console in real-time.")
+            local react_log = ConVar.Declare("/react_log", "", ConVar.CHEAT + ConVar.LOCAL, "Dumps recent react commits to the console.")
+            local react_live_log = ConVar.Declare("react_live_log", false, ConVar.CHEAT + ConVar.LOCAL, "Dumps recent react commits to the console in real-time.")
 
             react_live_log:Connect(function ()
                 LIVE_LOG = react_live_log:GetBool()
