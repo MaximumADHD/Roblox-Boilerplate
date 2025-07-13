@@ -93,11 +93,14 @@ local function stringIO(size: number)
         end,
 
         Writer = function(buf: buffer, offset: number, value: string)
-            local buf = buffer.create(size)
-
-            for i = 1, math.min(#value, size) do
-                local char = value:sub(i, i)
-                buffer.writeu8(buf, i - 1, char:byte())
+            -- Iterate the graphemes of the string, make sure we don't write invalid UTF-8.
+            for i, j in utf8.graphemes(value) do
+                if j > size then
+                    break
+                end
+                
+                local char = value:sub(i, j)
+                buffer.writestring(buf, offset + (i - 1), char)
             end
         end,
     }
