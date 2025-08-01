@@ -41,7 +41,7 @@ function mockNetwork.Event<T...>(id, validator)
                 end,
                 
                 Fire = function (self, ...)
-                    toServer:Fire(...)
+                    toServer:Fire(player, ...)
                 end,
             }
         end,
